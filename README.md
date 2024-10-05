@@ -1,6 +1,7 @@
+# Wave-2: story-validators-race
 <img src="assests/grafa-banner-2.png" alt="Grafa banner" style="width: 100%; height: 100%; object-fit: cover;" />
 
-# Guide to Setting Up Grafana Dashboard for Node Monitoring
+# Task3: Guide to Setting Up Grafana Dashboard for Node Monitoring
 
 <img src="assests/grafa-dashboard-finish.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
