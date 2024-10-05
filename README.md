@@ -274,7 +274,7 @@ Select the Prometheus data source you just added
 
 Download the 0G-grafana-json-file from https://josephtran.co/0g_validator.json
 
-<img src="assests/grafa-import-json2.png" style="width: 100%; height: 100%; object-fit: cover;" />
+<img src="assests/grafa-json-import.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 - Customize Dashboard:
 
