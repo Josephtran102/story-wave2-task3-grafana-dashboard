@@ -301,3 +301,9 @@ Conclusion
 You now have a fully functional monitoring system for your node. This setup allows you to visualize system metrics, set up alerts, and gain insights into your node's performance. Remember to regularly check and update your monitoring setup to ensure it remains effective and secure.
 
 This comprehensive guide should provide a solid foundation for setting up Grafana to monitor your node. It covers all the necessary steps from installation to configuration, and includes some basic troubleshooting and maintenance tips.
+
+## 📫 If you need any help. Contact to me:
+[![Website](https://img.shields.io/badge/Website-3b5998?style=for-the-badge&logo=google-chrome&logoColor=white)](https://josephtran.xyz/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/josephtran102)
+[![telegram](https://img.shields.io/badge/telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/josephtran)
+[![discord](https://img.shields.io/badge/discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discordapp.com/users/597430737440079883)
