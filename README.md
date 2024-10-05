@@ -247,14 +247,14 @@ sudo systemctl status grafana-server
 ## 4. Configuring Grafana Dashboard
 
 - Access Grafana web interface:
-Open your browser and navigate to http://your_server_ip:3000
+Open your browser and navigate to `http://your_server_ip:3000`
 
 <img src="assests/grafa-login.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 - Default login: `admin/admin` then change to your password
 
 - Add Prometheus as a data source:
-Click "Add new data source" and select Prometheus
+Click `"Add new data source"` and select Prometheus
 
 <img src="assests/grafa-data-source.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
@@ -262,7 +262,7 @@ Enter http://localhost:9099 as the Prometheus server URL. (This port the same po
 
 <img src="assests/grafa-import-port.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
-Click "Save & Test" at the bottom
+Click `"Save & Test"` at the bottom
 
 - Import Dashboard:
 Go to Dashboards and click "Upload JSON file"
@@ -286,7 +286,7 @@ Adjust time ranges, add new panels, or modify existing ones as needed
 
 If Prometheus fails to start, check the configuration file for syntax errors
 Ensure all necessary ports are open in your firewall
-Check service logs using journalctl -u [service_name] for any error messages
+Check service logs using `journalctl -u [service_name]` for any error messages
 
 ## 6. Maintenance
 
