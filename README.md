@@ -1,6 +1,9 @@
 <img src="assests/grafa-banner.png" alt="Grafa banner" style="width: 100%; height: 100%; object-fit: cover;" />
 
 # Guide to Setting Up Grafana Dashboard for Node Monitoring
+
+<img src="assests/grafa-dashboard-finish.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 # Overview
 To set up an effective node monitoring system, we'll use three main tools:
 
