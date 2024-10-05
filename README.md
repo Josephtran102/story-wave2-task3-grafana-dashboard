@@ -280,6 +280,8 @@ Download the 0G-grafana-json-file from https://josephtran.co/0g_validator.json
 
 Adjust time ranges, add new panels, or modify existing ones as needed
 
+<img src="assests/grafa-dashboard-finish.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 ## 5. Troubleshooting
 
 If Prometheus fails to start, check the configuration file for syntax errors
