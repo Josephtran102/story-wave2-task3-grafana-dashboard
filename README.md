@@ -45,12 +45,116 @@ sudo chmod 755 /opt/prometheus/prometheus
 ```
 sudo nano /etc/prometheus/prometheus.yml
 ```
-[Insert Prometheus configuration content from the original post]
+Insert Prometheus configuration content:
+```
+# Sample config for Prometheus.
+
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+
+
+# Attach these labels to any time series or alerts when communicating with
+# external systems (federation, remote storage, Alertmanager).
+
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets: ['localhost:9093']
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus'
+
+    # Override the global default and scrape targets from this job every 5 seconds.
+    scrape_interval: 5s
+    scrape_timeout: 5s
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: node-exporter
+    # If prometheus-node-exporter is installed, grab stats about the local
+    # machine by default.
+    static_configs:
+      - targets: ['PUBLIC_SERVER_IP:9200']
+  
+  - job_name: 'Story'
+    static_configs:
+      - targets: ['PUBLIC_SERVER_IP:26660']
+```
+Explain config:
+```bash
+- job_name: 'Story'
+    static_configs:
+      - targets: ['PUBLIC_SERVER_IP:26660']
+```
+For config this port IP_VPS:26660 you have to edit file at `$HOME/.story/story/config/config.toml` and Restart Story node
+
+Set permissions for the configuration file
+```bash
+sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
+```
 - Create service file:
 ```bash
 sudo nano /etc/systemd/system/prometheus.service
 ```
-[Insert service file content from the original post]
+Insert service content:
+```
+[Unit]
+Description=Monitoring system and time series database
+Documentation=https://prometheus.io/docs/introduction/overview/ man:prometheus(1)
+After=time-sync.target
+
+[Service]
+Restart=on-failure
+User=prometheus
+EnvironmentFile=/etc/default/prometheus
+ExecStart=/opt/prometheus/prometheus $ARGS --web.listen-address=:9099 --config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/var/lib/prometheus
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStopSec=20s
+SendSIGKILL=no
+
+# systemd hardening-options
+AmbientCapabilities=
+CapabilityBoundingSet=
+DeviceAllow=/dev/null rw
+DevicePolicy=strict
+LimitMEMLOCK=0
+LimitNOFILE=8192
+LockPersonality=true
+MemoryDenyWriteExecute=true
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+PrivateUsers=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=full
+RemoveIPC=true
+RestrictNamespaces=true
+RestrictRealtime=true
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=multi-user.target
+```
 - Start Prometheus:
 ```
 sudo systemctl daemon-reload
