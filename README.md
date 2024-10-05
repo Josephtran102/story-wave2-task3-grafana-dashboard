@@ -112,7 +112,7 @@ Explain config:
       - targets: ['PUBLIC_SERVER_IP:26660']
 ```
 
-- For config this port IP_VPS:26660 you have to edit file at `$HOME/.story/story/config/config.toml` and Restart Story node
+- For config this port `PUBLIC_SERVER_IP:26660` you have to edit file at `$HOME/.story/story/config/config.toml` and Restart Story node
 
 <img src="assests/story-prome-config.png" style="width: 100%; height: 100%; object-fit: cover;" />
 Set permissions for the configuration file
@@ -185,6 +185,8 @@ wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_e
 tar xvf node_exporter-1.5.0.linux-amd64.tar.gz
 sudo cp node_exporter-1.5.0.linux-amd64/node_exporter /usr/local/bin/
 ```
+<img src="assests/node-exporter-download.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 - Create service file:
 ```
 sudo nano /etc/systemd/system/node_exporter.service
@@ -205,6 +207,9 @@ Restart=always
 WantedBy=default.target
 
 ```
+<img src="assests/exporter-service-file.png" style="width: 100%; height: 100%; object-fit: cover;" />
+- You can custom port if get conflict
+
 - Start Node Exporter:
 ```
 chmod +x /root/node_exporter-1.5.0.linux-amd64/node_exporter
@@ -213,6 +218,8 @@ sudo systemctl enable node_exporter
 systemctl start node_exporter
 systemctl status node_exporter
 ```
+<img src="assests/assests/exporter-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 ## 3. Installing Grafana
 Grafana is an open-source platform for data analytics and visualization.
 - Install Grafana:
@@ -224,11 +231,16 @@ sudo apt-get update
 sudo apt-get install grafana
 sudo systemctl enable grafana-server
 ```
+<img src="assests/assests/grafa-download1.png" style="width: 100%; height: 100%; object-fit: cover;" />
+<img src="assests/assests/grafa-download2.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 - Start Grafana:
 ```
 sudo systemctl start grafana-server
 sudo systemctl status grafana-server
 ```
+<img src="assests/grafa-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 ## 4. Configuring Grafana Dashboard
 - Access Grafana web interface:
 Open your browser and navigate to http://your_server_ip:3000
