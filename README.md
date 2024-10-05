@@ -287,15 +287,15 @@ Adjust time ranges, add new panels, or modify existing ones as needed
 
 ## 5. Troubleshooting
 
-If Prometheus fails to start, check the configuration file for syntax errors
-Ensure all necessary ports are open in your firewall
-Check service logs using `journalctl -u [service_name]` for any error messages
+- If Prometheus fails to start, check the configuration file for syntax errors
+- Ensure all necessary ports are open in your firewall
+- Check service logs using `journalctl -u [service_name]` for any error messages
 
 ## 6. Maintenance
 
-Regularly update Prometheus, Node Exporter, and Grafana to their latest versions
-Backup your Grafana dashboards and Prometheus data periodically
-Monitor disk usage of the Prometheus data directory
+- Regularly update Prometheus, Node Exporter, and Grafana to their latest versions
+- Backup your Grafana dashboards and Prometheus data periodically
+- Monitor disk usage of the Prometheus data directory
 
 Conclusion
 You now have a fully functional monitoring system for your node. This setup allows you to visualize system metrics, set up alerts, and gain insights into your node's performance. Remember to regularly check and update your monitoring setup to ensure it remains effective and secure.
