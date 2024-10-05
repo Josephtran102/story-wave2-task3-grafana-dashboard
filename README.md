@@ -219,7 +219,7 @@ sudo systemctl enable node_exporter
 systemctl start node_exporter
 systemctl status node_exporter
 ```
-<img src="assests/assests/exporter-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
+<img src="assests/exporter-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 ## 3. Installing Grafana
 Grafana is an open-source platform for data analytics and visualization.
@@ -245,21 +245,36 @@ sudo systemctl status grafana-server
 <img src="assests/grafa-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 ## 4. Configuring Grafana Dashboard
+
 - Access Grafana web interface:
 Open your browser and navigate to http://your_server_ip:3000
-Default login: admin/admin
-b) Add Prometheus as a data source:
 
+<img src="assests/grafa-login.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
+- Default login: `admin/admin` then change to your password
+
+- Add Prometheus as a data source:
 Click "Add new data source" and select Prometheus
-Enter http://localhost:9099 as the Prometheus server URL
+
+<img src="assests/grafa-data-source.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
+Enter http://localhost:9099 as the Prometheus server URL. (This port the same port in Prometheus service config)
+
+<img src="assests/grafa-import-port.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 Click "Save & Test" at the bottom
 
 - Import Dashboard:
-
 Go to Dashboards and click "Upload JSON file"
-Download the 0G-grafana-json-file from https://josephtran.co/0g_validator.json
+
+<img src="assests/grafa-import-json.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 Upload the downloaded JSON file
 Select the Prometheus data source you just added
+
+Download the 0G-grafana-json-file from https://josephtran.co/0g_validator.json
+
+<img src="assests/grafa-import-json2.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 - Customize Dashboard:
 
