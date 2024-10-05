@@ -1,4 +1,4 @@
-<img src="assests/grafana-banner.png" style="width: 100%; height: 150px; object-fit: cover;" />
+<img src="assests/grafana-banner.png" style="width: 100%; height: 200px; object-fit: cover;" />
 
 # Guide to Setting Up Grafana Dashboard for Node Monitoring
 ## Overview
