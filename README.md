@@ -48,7 +48,7 @@ sudo nano /etc/prometheus/prometheus.yml
 [Insert Prometheus configuration content from the original post]
 - Create service file:
 ```bash
-sudo nano /lib/systemd/system/prometheus.service
+sudo nano /etc/systemd/system/prometheus.service
 ```
 [Insert service file content from the original post]
 - Start Prometheus:
@@ -77,7 +77,8 @@ c) Start Node Exporter:
 chmod +x /root/node_exporter-1.5.0.linux-amd64/node_exporter
 systemctl daemon-reload
 sudo systemctl enable node_exporter
-systemctl restart node_exporter
+systemctl start node_exporter
+systemctl status node_exporter
 ```
 ## 3. Installing Grafana
 Grafana is an open-source platform for data analytics and visualization.
@@ -92,7 +93,8 @@ sudo systemctl enable grafana-server
 ```
 - Start Grafana:
 ```
-sudo systemctl restart grafana-server
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
 ```
 ## 4. Configuring Grafana Dashboard
 - Access Grafana web interface:
