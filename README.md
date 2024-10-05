@@ -177,9 +177,23 @@ sudo cp node_exporter-1.5.0.linux-amd64/node_exporter /usr/local/bin/
 ```
 sudo nano /etc/systemd/system/node_exporter.service
 ```
-[Insert service file content from the original post]
+Insert service file content:
+```bash
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
 
-c) Start Node Exporter:
+[Service]
+User=root
+ExecStart=/root/node_exporter-1.5.0.linux-amd64/node_exporter --web.listen-address=:9200
+Restart=always
+
+[Install]
+WantedBy=default.target
+
+```
+- Start Node Exporter:
 ```
 chmod +x /root/node_exporter-1.5.0.linux-amd64/node_exporter
 systemctl daemon-reload
