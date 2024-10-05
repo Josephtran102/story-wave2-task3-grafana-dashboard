@@ -233,6 +233,7 @@ sudo apt-get install grafana
 sudo systemctl enable grafana-server
 ```
 <img src="assests/assests/grafa-download1.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 <img src="assests/assests/grafa-download2.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 - Start Grafana:
@@ -240,6 +241,7 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 sudo systemctl status grafana-server
 ```
+
 <img src="assests/grafa-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 ## 4. Configuring Grafana Dashboard
