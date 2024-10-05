@@ -1,21 +1,21 @@
 <img src="assests/grafa-banner.png" alt="Grafa banner" style="width: 100%; height: 100%; object-fit: cover;" />
 
 # Guide to Setting Up Grafana Dashboard for Node Monitoring
-## Overview
+# Overview
 To set up an effective node monitoring system, we'll use three main tools:
 
 1. Prometheus: Collects and stores metrics.
 2. Node Exporter: Gathers metrics from the system and hardware.
 3. Grafana: Displays data in graphs and dashboards.
 
-## System Requirements
+# System Requirements
 
 - Operating System: Ubuntu 20.04 LTS or newer
 - RAM: Minimum 2GB
 - CPU: 2 cores or more
 - Disk Space: At least 20GB free
 
-## Implementation Steps
+# Implementation Steps
 
 ## 1. Installing Prometheus
 Prometheus is an open-source monitoring system and time series database.
@@ -61,7 +61,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable prometheus
 sudo systemctl restart prometheus
 ```
-### 2. Installing Node Exporter
+## 2. Installing Node Exporter
 Node Exporter collects hardware and OS metrics.
 - Download and install Node Exporter:
 ```
@@ -83,7 +83,7 @@ systemctl daemon-reload
 sudo systemctl enable node_exporter
 systemctl restart node_exporter
 ```
-### 3. Installing Grafana
+## 3. Installing Grafana
 Grafana is an open-source platform for data analytics and visualization.
 - Install Grafana:
 ```bash
@@ -98,7 +98,7 @@ sudo systemctl enable grafana-server
 ```
 sudo systemctl restart grafana-server
 ```
-### 4. Configuring Grafana Dashboard
+## 4. Configuring Grafana Dashboard
 - Access Grafana web interface:
 Open your browser and navigate to http://your_server_ip:3000
 Default login: admin/admin
@@ -119,13 +119,13 @@ Select the Prometheus data source you just added
 
 Adjust time ranges, add new panels, or modify existing ones as needed
 
-### 5. Troubleshooting
+## 5. Troubleshooting
 
 If Prometheus fails to start, check the configuration file for syntax errors
 Ensure all necessary ports are open in your firewall
 Check service logs using journalctl -u [service_name] for any error messages
 
-### 6. Maintenance
+## 6. Maintenance
 
 Regularly update Prometheus, Node Exporter, and Grafana to their latest versions
 Backup your Grafana dashboards and Prometheus data periodically
