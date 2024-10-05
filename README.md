@@ -25,7 +25,7 @@ cd $HOME
 wget https://github.com/prometheus/prometheus/releases/download/v2.42.0/prometheus-2.42.0.linux-amd64.tar.gz
 tar xvf prometheus-2.42.0.linux-amd64.tar.gz
 sudo mkdir -p /opt/prometheus
-sudo cp prometheus-2.42.0.linux-amd64 /opt/prometheus
+sudo cp -r prometheus-2.42.0.linux-amd64/* /opt/prometheus/
 ```
 - Create Prometheus user:
 ```bash
