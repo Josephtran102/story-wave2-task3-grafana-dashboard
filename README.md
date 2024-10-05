@@ -161,7 +161,8 @@ WantedBy=multi-user.target
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus
-sudo systemctl restart prometheus
+sudo systemctl start prometheus
+sudo systemctl status prometheus
 ```
 ## 2. Installing Node Exporter
 Node Exporter collects hardware and OS metrics.
