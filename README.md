@@ -14,3 +14,9 @@ To set up an effective node monitoring system, we'll use three main tools:
 - RAM: Minimum 2GB
 - CPU: 2 cores or more
 - Disk Space: At least 20GB free
+
+## Implementation Steps
+
+### 1. Installing Prometheus
+Prometheus is an open-source monitoring system and time series database.
+a) Download and install Prometheus:
