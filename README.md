@@ -28,6 +28,7 @@ sudo mkdir -p /opt/prometheus
 sudo cp -r prometheus-2.42.0.linux-amd64/* /opt/prometheus/
 rm -f prometheus-2.42.0.linux-amd64.tar.gz
 ```
+<img src="assests/download-prome.png" alt="Grafa banner" style="width: 100%; height: 100%; object-fit: cover;" />
 - Create Prometheus user:
 ```bash
 sudo useradd --no-create-home --shell /bin/false prometheus
