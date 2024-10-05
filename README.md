@@ -115,6 +115,7 @@ Explain config:
 - For config this port `PUBLIC_SERVER_IP:26660` you have to edit file at `$HOME/.story/story/config/config.toml` and Restart Story node
 
 <img src="assests/story-prome-config.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 Set permissions for the configuration file
 ```bash
 sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
