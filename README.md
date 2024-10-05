@@ -111,7 +111,9 @@ Explain config:
     static_configs:
       - targets: ['PUBLIC_SERVER_IP:26660']
 ```
-For config this port IP_VPS:26660 you have to edit file at `$HOME/.story/story/config/config.toml` and Restart Story node
+
+- For config this port IP_VPS:26660 you have to edit file at `$HOME/.story/story/config/config.toml` and Restart Story node
+
 <img src="assests/story-prome-config.png" style="width: 100%; height: 100%; object-fit: cover;" />
 Set permissions for the configuration file
 ```bash
@@ -173,6 +175,7 @@ sudo systemctl start prometheus
 sudo systemctl status prometheus
 ```
 <img src="assests/prome-service-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 ## 2. Installing Node Exporter
 Node Exporter collects hardware and OS metrics.
 - Download and install Node Exporter:
