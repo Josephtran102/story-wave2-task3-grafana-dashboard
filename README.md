@@ -38,11 +38,7 @@ sudo touch /etc/default/prometheus
 ```
 - Configure permissions:
 ```bash
-sudo chown prometheus:prometheus /etc/prometheus
-sudo chown prometheus:prometheus /var/lib/prometheus
-sudo chown -R prometheus:prometheus /opt/prometheus
-sudo chown -R prometheus:prometheus /etc/prometheus
-sudo chown -R prometheus:prometheus /var/lib/prometheus
+sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus /opt/prometheus
 sudo chmod 755 /opt/prometheus/prometheus
 ```
 - Create Prometheus configuration file:
