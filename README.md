@@ -17,6 +17,6 @@ To set up an effective node monitoring system, we'll use three main tools:
 
 ## Implementation Steps
 
-### 1. Installing Prometheus
+#### Installing Prometheus
 Prometheus is an open-source monitoring system and time series database.
 a) Download and install Prometheus:
