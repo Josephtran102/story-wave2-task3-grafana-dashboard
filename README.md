@@ -275,7 +275,7 @@ Go to Dashboards and click "Upload JSON file"
 Upload the downloaded JSON file
 Select the Prometheus data source you just added
 
-Download the 0G-grafana-json-file from https://josephtran.co/0g_validator.json
+Download the 0G-grafana-json-file from [https://story.josephtran.co/story_validator.json](https://story.josephtran.co/story_validator.json)
 
 <img src="assests/grafa-json-import.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
