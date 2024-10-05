@@ -29,7 +29,7 @@ sudo mkdir -p /opt/prometheus
 sudo cp -r prometheus-2.42.0.linux-amd64/* /opt/prometheus/
 rm -f prometheus-2.42.0.linux-amd64.tar.gz
 ```
-<img src="assests/download-prome.png" alt="Grafa banner" style="width: 100%; height: 100%; object-fit: cover;" />
+<img src="assests/download-prome.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
 - Create Prometheus user:
 
@@ -103,6 +103,8 @@ scrape_configs:
     static_configs:
       - targets: ['PUBLIC_SERVER_IP:26660']
 ```
+<img src="assests/prome-config.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 Explain config:
 ```bash
 - job_name: 'Story'
@@ -110,7 +112,7 @@ Explain config:
       - targets: ['PUBLIC_SERVER_IP:26660']
 ```
 For config this port IP_VPS:26660 you have to edit file at `$HOME/.story/story/config/config.toml` and Restart Story node
-
+<img src="assests/story-prome-config.png" style="width: 100%; height: 100%; object-fit: cover;" />
 Set permissions for the configuration file
 ```bash
 sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
@@ -161,6 +163,8 @@ SystemCallArchitectures=native
 [Install]
 WantedBy=multi-user.target
 ```
+<img src="assests/prome-service.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 - Start Prometheus:
 ```
 sudo systemctl daemon-reload
@@ -168,6 +172,7 @@ sudo systemctl enable prometheus
 sudo systemctl start prometheus
 sudo systemctl status prometheus
 ```
+<img src="assests/prome-service-status.png" style="width: 100%; height: 100%; object-fit: cover;" />
 ## 2. Installing Node Exporter
 Node Exporter collects hardware and OS metrics.
 - Download and install Node Exporter:
