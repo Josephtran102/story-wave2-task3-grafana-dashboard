@@ -1,3 +1,5 @@
+<img src="assests/grafana-banner.png" style="width: 100%; height: 150px; object-fit: cover;" />
+
 # Guide to Setting Up Grafana Dashboard for Node Monitoring
 ## Overview
 To set up an effective node monitoring system, we'll use three main tools:
