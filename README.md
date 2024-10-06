@@ -5,7 +5,7 @@
 
 <img src="assests/grafa-dashboard-finish.png" style="width: 100%; height: 100%; object-fit: cover;" />
 
-[https://story-dashboard.josephtran.xyz/](https://story-dashboard.josephtran.xyz/)  |  username: user  |  password: 123456
+### Preview: [https://story-dashboard.josephtran.xyz/](https://story-dashboard.josephtran.xyz/)  |  username: user  |  password: 123456
 
 # Overview
 To set up an effective node monitoring system, we'll use three main tools:
