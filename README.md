@@ -7,7 +7,7 @@
 
 <div align="center">
 
-### #Preview: [https://story-dashboard.josephtran.xyz/](https://story-dashboard.josephtran.xyz/)  |  username: user  |  password: 123456
+ Preview: [https://story-dashboard.josephtran.xyz/](https://story-dashboard.josephtran.xyz/)  |  username: `user`  |  password: `123456`
 
 </div>
 
