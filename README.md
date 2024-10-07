@@ -310,6 +310,12 @@ Adjust time ranges, add new panels, or modify existing ones as needed
 - Backup your Grafana dashboards and Prometheus data periodically
 - Monitor disk usage of the Prometheus data directory
 
+### Setup Alert:
+
+<img src="assests/alert1.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
+<img src="assests/Alert-rule.png" style="width: 100%; height: 100%; object-fit: cover;" />
+
 Conclusion
 You now have a fully functional monitoring system for your node. This setup allows you to visualize system metrics, set up alerts, and gain insights into your node's performance. Remember to regularly check and update your monitoring setup to ensure it remains effective and secure.
 
